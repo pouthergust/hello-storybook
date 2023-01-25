@@ -1,0 +1,26 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import Button from '../components/Button';
+
+<Meta 
+    title="MDX/Button" 
+    component={Button} 
+/>
+
+export const Template = (args) => <Button {...args}>{args.children}</Button>;
+
+<Story 
+  name="Primary"
+  args={{ 
+    children: 'Primary',
+    theme: 'primary'
+  }}>
+  {Template.bind({})}
+</Story>
+
+<Story 
+  name="Secondary"
+  args={{ 
+    children: 'Secondary'
+  }}>
+  {Template.bind({})}
+</Story>
